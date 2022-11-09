@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root{
+    --color-main: rgb(48, 48, 48);
+    --color-secondary: rgb(116, 2, 2);
+    --color-light: rgb(235, 235, 235);
+    --color-medium: rgb(128, 128, 128);
+    --color-dark: rgb(29, 29, 29);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 14rem;
+    height: 20rem;
+    border-radius: 32px;
+    background-color: var(--color-main);
+}
+
+.calculator-screen{
+    margin-bottom: 1.5rem;
+    height: 3rem;
+    border-radius: 16px;
+    border-style: none;
+    text-align: end;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.calculator-keys{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+
+.equal-sign{
+    grid-area: 2/4/6/5;
+}
+
+button{
+    border-radius: 3.14rem;
+    border-style: none;
+    background-color: var(--color-light);
+    transition: all 0.2s ease 0s;
+}
+
+button.function ,.operator{
+    background-color: var(--color-secondary);
+}
+
+button.function.decimal{
+    grid-area: 5/1/6/2;
+}
+
+button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-secondary);
+}

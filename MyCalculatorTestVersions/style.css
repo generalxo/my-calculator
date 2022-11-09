@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root{
+    --main-bg-color: rgb(53, 0, 0);
+    --light-bg-color: rgb(61, 61, 61);
+    --verylight-bg-color: rgb(218, 219, 236);
+    --dark-bg-color: rgb(30, 27, 44);
+    --secondary-color: rgb(90, 0, 50);
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50% );
+    width: 450px;
+    border-radius: 16px;
+    border: 3px solid var(--dark-bg-color) ;
+    background-color: var(--main-bg-color);
+}
+
+.calculator-screen {
+    align-self: center;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 2rem;
+    width: 400px;
+    font-size: 4.5rem;
+    color: var(--dark-bg-color);
+    background-color: var(--verylight-bg-color);
+    text-align: end;
+    height: 75px;
+    border-radius: 12px;
+    
+}
+
+button {
+    height: 75px;
+    background-color: var(--verylight-bg-color);
+    border-style: none;
+    border-radius: 5px;
+    font-size: 4rem;
+    color: var(--dark-bg-color);
+    transition: all 0.2s ease 0s;
+}
+
+button:hover {
+    background-color: var(--light-bg-color);
+    color: white;
+}
+
+[operator] {
+    color: var(--secondary-color);
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1.2rem;
+    padding: 2rem;
+}
+
+.equal-sign{
+    grid-area: 2/4/6/5;
+    height: 100%;
+}
